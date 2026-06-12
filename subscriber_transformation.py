@@ -40,6 +40,8 @@ sub_df = sub_df.drop("Birth_date")
 # COMMAND ----------
 
 display(sub_df.limit(10))
+sub_df = sub_df.filter(col("Subsriber_age") >= 0)
+display(sub_df)
 
 # COMMAND ----------
 
@@ -63,3 +65,12 @@ display(sub_df.select("*").filter(col("sub_id") == "SUBID10049"))
 # COMMAND ----------
 
 write2silver(sub_df,"Subscriber_S.csv")
+
+# COMMAND ----------
+
+# just adding display function at the end
+
+
+display(sub_df.limit(10))
+
+
