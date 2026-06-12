@@ -40,6 +40,8 @@ sub_df = sub_df.drop("Birth_date")
 # COMMAND ----------
 
 display(sub_df.limit(10))
+sub_df = sub_df.filter(col("Subsriber_age") >= 0)
+display(sub_df)
 
 # COMMAND ----------
 
