@@ -63,3 +63,12 @@ display(sub_df.select("*").filter(col("sub_id") == "SUBID10049"))
 # COMMAND ----------
 
 write2silver(sub_df,"Subscriber_S.csv")
+
+# COMMAND ----------
+
+# just adding display function at the end
+
+
+display(sub_df.limit(10))
+
+
